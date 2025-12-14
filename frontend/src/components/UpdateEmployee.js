@@ -7,7 +7,7 @@ export default function UpdateEmployee() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/employees/${id}`, { Designation: designation });
+      await axios.put(`https://employee-management-eyyv.onrender.com/api/employees/${id}`, { Designation: designation });
       alert('Designation updated successfully');
     } catch {
       alert('Employee not found');
