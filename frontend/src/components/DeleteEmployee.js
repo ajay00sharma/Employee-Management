@@ -7,7 +7,7 @@ export default function DeleteEmployee() {
   const handleDelete = async () => {
     if (!id) return alert('Please enter Employee ID');
     try {
-      await axios.delete(`http://localhost:5000/api/employees/${id}`);
+      await axios.delete(`https://employee-management-eyyv.onrender.com/api/employees/${id}`);
       alert('Employee deleted successfully');
       setId('');
     } catch (error) {
