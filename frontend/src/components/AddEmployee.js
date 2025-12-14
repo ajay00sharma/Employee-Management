@@ -10,7 +10,7 @@ export default function AddEmployee() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.post('http://localhost:5000/api/employees', employee);
+    await axios.post('https://employee-management-eyyv.onrender.com/api/employees', employee);
     alert('Employee added successfully');
   };
 
