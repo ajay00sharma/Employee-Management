@@ -7,11 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect MongoDB
-mongoose.connect('mongodb://localhost:27017/Employees', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+const mongoURI = process.env.MONGO_URI;
+
+mongoose.connect(mongoURI)
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
 
 // Add Employee
 app.post('/api/employees', async (req, res) => {
