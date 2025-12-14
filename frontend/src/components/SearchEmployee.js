@@ -7,7 +7,7 @@ export default function SearchEmployee() {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/employees/${id}`);
+      const res = await axios.get(`https://employee-management-eyyv.onrender.com/api/employees/${id}`);
       setResult(JSON.stringify(res.data, null, 2));
     } catch {
       setResult('Employee not found');
